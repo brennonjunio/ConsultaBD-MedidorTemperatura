@@ -8,4 +8,5 @@ class ControllerBd {
     return teste;
   }
 }
+
 module.exports = ControllerBd;
