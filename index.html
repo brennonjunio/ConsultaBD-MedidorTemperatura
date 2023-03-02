@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BD express</title>
+  </head>
+  <body>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>AÇÕES</th>
+          <th scope="col">ID</th>
+          <th scope="col">NOME</th>
+          <th scope="col">EMAIL</th>
+          <th scope="col">DATA DE NASCIMENTO</th>
+          <th scope="col">TELEFONES</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{# each pessoas}}
+        <tr>
+          <th>
+            <a href="/show/{{this.id}}" class="btn btn-primary btn-sm">VER</a>
+            <a href="/atualizar/{{this.id}}" class="btn btn-success btn-sm"
+              >ATUALIZAR</a
+            >
+            <a
+              href="/deletar
+              {{this.id}}"
+              class="btn btn-danger btn-sm"
+              >DELETAR</a
+            >
+          </th>
+          <th scope="row">{{this.id}}</th>
+          <td>{{this.nome}}</td>
+          <td>{{this.email}}</td>
+          <td>{{this.data_nascimento}}</td>
+          {{# each this.telefones}}
+          <td>{{this.numero}}</td>
+          {{/ each}}
+        </tr>
+        {{/ each}}
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+
+<table class="table">
+  <thead>
+    
+    <tr>
+      <th>AÇÕES</th>
+      <th scope="col">id_temp_humi</th>
+      <th scope="col">id_sensor</th>
+      <th scope="col">temp_value</th>
+      <th scope="col">humi_value</th>
+      <th scope="col">date_time</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each teste}}
+      <tr>
+        <th>
+          {{!-- <a href="/show/{{this.id}}" class="btn btn-primary btn-sm">VER</a>
+          <a
+            href="/atualizar/{{this.id}}"
+            class="btn btn-success btn-sm"
+          >ATUALIZAR</a>
+          <a
+            href="/deletar/{{this.id}}"
+            class="btn btn-danger btn-sm"
+          >DELETAR</a> --}}
+        </th id="table">
+        <th scope="row">{{this.id_temp_humi}}</th>
+        <td>{{this.id_sensor}}</td>
+        <td>{{this.temp_value}}</td>
+        <td>{{this.humi_value}}</td>
+        <td>{{this.date_time}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
